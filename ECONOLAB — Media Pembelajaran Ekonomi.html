@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>ECONOLAB — Media Pembelajaran Ekonomi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--n:#16324F;--t:#2A9D8F;--y:#F4C95D;--bg:#F4F7FA;--w:#fff;--tx:#1d2b3a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a26;--w:#182838;--tx:#e8eef4}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+h1,h2,h3{font-family:Poppins,sans-serif;line-height:1.25}
+nav{position:sticky;top:0;z-index:9;background:var(--n);display:flex;gap:4px;align-items:center;padding:10px 16px;overflow-x:auto}
+nav b{color:var(--y);font-family:Poppins;margin-right:auto;white-space:nowrap}nav a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:20px;font-size:14px;white-space:nowrap}nav a:hover{background:var(--t)}
+section{max-width:1000px;margin:auto;padding:40px 16px}
+.hero{background:linear-gradient(135deg,var(--n),#1f4a6e);color:#fff;max-width:none;padding:48px 16px}.hero>div{max-width:1000px;margin:auto;display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.hero h1{font-size:clamp(26px,4vw,40px);margin:8px 0}.tag{display:inline-block;background:var(--y);color:var(--n);padding:2px 12px;border-radius:20px;font-size:13px;font-weight:600;margin:2px 4px 2px 0}
+.btn{border:0;cursor:pointer;padding:10px 18px;border-radius:10px;font-weight:600;font-size:15px;background:var(--t);color:#fff;text-decoration:none;display:inline-block;margin:4px 4px 4px 0;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn.y{background:var(--y);color:var(--n)}.btn.o{background:transparent;border:2px solid var(--t);color:var(--t)}.btn:disabled{opacity:.4;cursor:not-allowed}
+.card{background:var(--w);border-radius:14px;padding:18px;box-shadow:0 2px 10px #0001;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.prog{height:12px;background:#0002;border-radius:9px;overflow:hidden}.prog i{display:block;height:100%;background:var(--y);transition:.4s}
+h2{color:var(--n)}@media(prefers-color-scheme:dark){h2{color:var(--y)}}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}.tabs button{border:0;background:var(--w);color:var(--tx);padding:8px 12px;border-radius:10px;cursor:pointer;white-space:nowrap;font-weight:600}.tabs button.on{background:var(--n);color:#fff}.tabs button.s::after{content:" ✓";color:var(--t)}
+.box{border-left:5px solid var(--y);background:#f4c95d22;padding:10px 14px;border-radius:8px;margin:10px 0}.box.t{border-color:var(--t);background:#2a9d8f22}
+.opt{display:block;width:100%;text-align:left;margin:6px 0;padding:10px;border-radius:10px;border:2px solid #8883;background:var(--w);color:var(--tx);cursor:pointer;font:inherit}.opt:hover{border-color:var(--t)}.opt.on{border-color:var(--n);background:#16324f18}.opt.ok{border-color:#1a9a4a;background:#1a9a4a22}.opt.bad{border-color:#d33;background:#d3333318}
+svg{width:100%;max-width:520px;height:auto;background:var(--w);border-radius:10px}svg text{fill:var(--tx);font-size:11px}
+input[type=range]{width:100%;accent-color:var(--t)}table{border-collapse:collapse;width:100%}td,th{border:1px solid #8884;padding:6px;text-align:left}
+.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.stat div{background:var(--w);border-radius:12px;padding:12px;text-align:center}.stat b{font-size:24px;color:var(--t);display:block}
+#timer{position:sticky;top:56px;z-index:5;background:var(--n);color:var(--y);padding:6px 14px;border-radius:10px;font-weight:700;display:inline-block}
+@media(max-width:720px){.hero>div{grid-template-columns:1fr}}
+</style></head><body>
+<nav id="top"><b>ECONOLAB</b><a href="#top">Beranda</a><a href="#judul">Judul Materi</a><a href="#tujuan">Tujuan Pembelajaran</a><a href="#materi">Isi Materi</a><a href="#evaluasi">Evaluasi</a></nav>
+
+<section class="hero" id="judul"><div><div>
+<span class="tag">Ekonomi</span>
+<h1>Permintaan dan Penawaran dalam Kegiatan Ekonomi</h1>
+<p><i>Memahami hubungan harga, jumlah barang, dan keseimbangan pasar dalam kehidupan sehari-hari.</i></p>
+<p>Media interaktif ini membantumu memahami bagaimana pembeli dan penjual saling memengaruhi harga di pasar melalui materi, grafik, simulasi, dan evaluasi.</p>
+<a class="btn y" href="#materi" onclick="openTab(0)">Mulai Belajar</a><a class="btn o" style="color:#fff;border-color:#fff" href="#tujuan">Lihat Tujuan Pembelajaran</a></div>
+<div><svg viewBox="0 0 300 220"><rect width="300" height="220" fill="#F4F7FA" rx="10"/><path d="M30 70h240l-20-40H50z" fill="#2A9D8F"/><path d="M50 30l20 40M90 30l10 40M130 30v40M170 30l-10 40M210 30l-10 40M250 30l-20 40" stroke="#fff" stroke-width="6"/><rect x="40" y="70" width="8" height="110" fill="#16324F"/><rect x="252" y="70" width="8" height="110" fill="#16324F"/><rect x="40" y="130" width="220" height="50" fill="#F4C95D"/><text x="55" y="125" font-size="30">🍅🥕🌶️🍎🥬</text><text x="100" y="165" font-size="14" fill="#16324F" style="fill:#16324F;font-size:14px;font-weight:700">Rp 20.000/kg</text><text x="30" y="205" font-size="28">🧑‍🌾</text><text x="220" y="205" font-size="28">🛒</text><text x="130" y="205" font-size="22">🤝</text></svg></div></div></section>
+
+<section id="progres"><h2>Progres Belajarmu</h2><div class="card"><div class="stat"><div><b id="pMat">0%</b>Materi dipelajari</div><div><b id="pChk">0/6</b>Tujuan dikuasai</div><div><b id="pLast">–</b>Nilai evaluasi terakhir</div><div><b id="pCnt">0</b>Evaluasi dikerjakan</div></div><p style="margin:12px 0 4px">Progres keseluruhan: <b id="pAll">0%</b></p><div class="prog"><i id="bar" style="width:0"></i></div><p><small>ℹ️ Data tersimpan secara lokal di browser yang kamu gunakan (localStorage), tidak dikirim ke server. Jika kamu berganti perangkat atau menghapus data browser, progres akan hilang.</small></p><button class="btn o" onclick="resetAll()">Hapus Semua Progres</button></div></section>
+
+<section id="tujuan"><h2>Tujuan Pembelajaran</h2><p>Setelah mempelajari materi, siswa diharapkan mampu:</p><div class="grid" id="goals"></div></section>
+
+<section id="materi"><h2>Isi Materi</h2><div class="tabs" id="tabs"></div><div class="card" id="mat"></div></section>
+
+<section id="evaluasi"><h2>Evaluasi Pembelajaran: Permintaan dan Penawaran</h2>
+<div class="card" id="evIntro"><p>Evaluasi bertujuan mengukur pemahamanmu setelah mempelajari materi. Terdapat <b>20 soal pilihan ganda</b>, waktu <b>30 menit</b>. Setiap jawaban benar bernilai 5 poin, jawaban salah 0 poin (nilai maksimal 100). Kunci jawaban baru ditampilkan setelah kamu mengumpulkan jawaban. Jika waktu habis, jawaban otomatis dikumpulkan.</p><button class="btn" onclick="startEv()">Mulai Evaluasi</button></div>
+<div id="evBox" hidden><div id="timer">⏱ 30:00</div><div id="qs"></div><p id="ans"></p><button class="btn y" onclick="submitEv()">Kumpulkan Jawaban</button></div>
+<div id="evRes" hidden></div></section>
+<footer style="text-align:center;padding:24px;background:var(--n);color:#fff">ECONOLAB — Media Pembelajaran Ekonomi</footer>
+
+<script>
+const $=s=>document.querySelector(s);let S={seen:[],chk:[],last:null,count:0};
+try{S=Object.assign(S,JSON.parse(localStorage.getItem('econolab')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('econolab',JSON.stringify(S))}catch(e){}};
+const NM=['A. Pengertian Permintaan','B. Faktor Permintaan','C. Kurva Permintaan','D. Pengertian Penawaran','E. Faktor Penawaran','F. Kurva Penawaran','G. Keseimbangan Pasar','H. Pergeseran & Studi Kasus'];
+const GOALS=['Menjelaskan pengertian permintaan dan penawaran.','Mengidentifikasi hukum permintaan dan hukum penawaran.','Menjelaskan faktor-faktor yang memengaruhi permintaan dan penawaran.','Menginterpretasikan kurva permintaan dan kurva penawaran.','Menganalisis terbentuknya harga dan jumlah keseimbangan pasar.','Menganalisis perubahan permintaan dan penawaran berdasarkan peristiwa ekonomi sehari-hari.'];
+const ICON=['📘','⚖️','🧩','📈','💹','🔍'];
+function prog(){const m=Math.round(S.seen.length/8*100);$('#pMat').textContent=m+'%';$('#pChk').textContent=S.chk.length+'/6';$('#pLast').textContent=S.last==null?'–':S.last;$('#pCnt').textContent=S.count;const a=Math.round((S.seen.length/8*70+S.chk.length/6*30));$('#pAll').textContent=a+'%';$('#bar').style.width=a+'%';
+document.querySelectorAll('#tabs button').forEach((b,i)=>b.classList.toggle('s',S.seen.includes(i)))}
+$('#goals').innerHTML=GOALS.map((g,i)=>`<label class="card" style="cursor:pointer;display:block"><div style="font-size:30px">${ICON[i]}</div><b>Tujuan ${i+1}</b><p>${g}</p><input type="checkbox" data-g="${i}" ${S.chk.includes(i)?'checked':''}> Saya sudah memahami ini</label>`).join('');
+document.querySelectorAll('[data-g]').forEach(c=>c.onchange=()=>{const i=+c.dataset.g;S.chk=S.chk.filter(x=>x!=i);if(c.checked)S.chk.push(i);save();prog()});
+
+// ===== Chart =====
+const X=q=>46+q/140*320,Y=p=>220-p/50*190;
+function pts(f){let r=[];for(let p=0;p<=50;p+=.5){const q=f(p);if(q>=0&&q<=140)r.push(X(q).toFixed(1)+','+Y(p).toFixed(1))}return r.join(' ')}
+function chart(o){const{A=100,C=20}=o;let s=`<svg viewBox="0 0 390 250"><path d="M46 20V220H370" stroke="#888" fill="none" stroke-width="2"/><text x="14" y="18">P (Harga)</text><text x="330" y="240">Q (Jumlah)</text>`;
+for(let p=0;p<=50;p+=10)s+=`<text x="26" y="${Y(p)+4}">${p}</text>`;for(let q=0;q<=140;q+=20)s+=`<text x="${X(q)-6}" y="236">${q}</text>`;
+if(o.oA!=null)s+=`<polyline points="${pts(p=>o.oA-2*p)}" fill="none" stroke="#3b82f6" stroke-dasharray="4" opacity=".5" stroke-width="2"/><polyline points="${pts(p=>o.oC+2*p)}" fill="none" stroke="#2A9D8F" stroke-dasharray="4" opacity=".5" stroke-width="2"/>`;
+if(o.D!==0)s+=`<polyline points="${pts(p=>A-2*p)}" fill="none" stroke="#2563eb" stroke-width="3"/>`;
+if(o.S!==0)s+=`<polyline points="${pts(p=>C+2*p)}" fill="none" stroke="#2A9D8F" stroke-width="3"/>`;
+if(o.D!==0){const p=Math.min(48,A/2-4);s+=`<text x="${X(A-2*p)+6}" y="${Y(p)}" style="fill:#2563eb;font-size:15px;font-weight:700">D</text>`}
+if(o.S!==0)s+=`<text x="${X(C+2*46)-16}" y="${Y(46)+2}" style="fill:#2A9D8F;font-size:15px;font-weight:700">S</text>`;
+if(o.p!=null){const p=o.p;[[o.D!==0,A-2*p,'#2563eb'],[o.S!==0,C+2*p,'#2A9D8F']].forEach(([on,q,c])=>{if(on&&q>=0&&q<=140)s+=`<circle cx="${X(q)}" cy="${Y(p)}" r="5" fill="${c}"/><path d="M46 ${Y(p)}H${X(q)}V220" stroke="${c}" stroke-dasharray="3" fill="none"/>`})}
+if(o.eq){const pe=(A-C)/4,qe=A-2*pe;s+=`<circle cx="${X(qe)}" cy="${Y(pe)}" r="6" fill="#F4C95D" stroke="#16324F" stroke-width="2"/><text x="${X(qe)+8}" y="${Y(pe)-8}" style="font-weight:700;font-size:14px">E</text><path d="M46 ${Y(pe)}H${X(qe)}V220" stroke="#c9a227" stroke-dasharray="3" fill="none"/><text x="4" y="${Y(pe)-4}">Pe=${pe}</text><text x="${X(qe)-14}" y="248">Qe=${qe}</text>`}
+return s+'</svg>'}
+
+// ===== Materi =====
+const M=[
+{b:`<p><b>Permintaan</b> adalah jumlah barang atau jasa yang bersedia dan mampu dibeli konsumen pada berbagai tingkat harga dalam waktu tertentu.</p>
+<div class="box t"><b>Keinginan vs permintaan efektif.</b> Keinginan hanya hasrat untuk memiliki sesuatu. <b>Permintaan efektif</b> adalah keinginan yang disertai kemampuan membeli. Contoh: Dina ingin ponsel baru seharga Rp5 juta tetapi uangnya hanya Rp1 juta (keinginan). Rani ingin dan punya uang Rp5 juta, lalu membelinya (permintaan efektif).</div>
+<div class="box"><b>Hukum permintaan:</b> “Jika harga suatu barang naik, jumlah barang yang diminta turun; jika harga turun, jumlah yang diminta naik, dengan anggapan faktor lain tetap (<i>ceteris paribus</i>).”</div>`,
+s:'Permintaan = keinginan + kemampuan membeli. Hukum permintaan: harga dan jumlah diminta berhubungan terbalik.',e:'Saat toko memberi diskon sepatu 30%, jumlah pembeli meningkat.',q:['Menurut hukum permintaan, jika harga bakso turun maka jumlah bakso yang diminta…',['Turun','Naik','Tetap','Hilang'],1,'Hubungan harga dan jumlah diminta berlawanan arah.']},
+{b:`<p>Faktor yang memengaruhi permintaan (selain harga barang itu sendiri, yang menyebabkan <i>pergerakan</i> sepanjang kurva) menyebabkan <i>pergeseran</i> kurva:</p><table><tr><th>Faktor</th><th>Contoh</th></tr>
+<tr><td>Harga barang itu sendiri</td><td>Harga mi instan turun → jumlah yang dibeli naik.</td></tr>
+<tr><td>Pendapatan konsumen</td><td>Gaji naik → pembelian pakaian dan makanan bergizi bertambah.</td></tr>
+<tr><td>Selera masyarakat</td><td>Sepatu tren dipakai artis → permintaannya melonjak.</td></tr>
+<tr><td>Harga barang substitusi/komplementer</td><td>Harga teh naik → permintaan kopi (substitusi) naik. Harga bensin naik → permintaan mobil (komplementer) turun.</td></tr>
+<tr><td>Jumlah konsumen</td><td>Wisatawan bertambah → permintaan oleh-oleh naik.</td></tr>
+<tr><td>Perkiraan harga mendatang</td><td>Harga BBM diperkirakan naik besok → orang antre membeli hari ini.</td></tr></table>`,
+s:'Faktor non-harga menggeser kurva permintaan; harga barang itu sendiri menggerakkan titik sepanjang kurva.',e:'Menjelang tahun ajaran baru, permintaan seragam dan buku naik karena jumlah konsumen meningkat.',q:['Harga kopi naik sehingga permintaan teh (barang substitusi) meningkat. Faktor yang berperan adalah…',['Selera','Harga barang substitusi','Jumlah konsumen','Pendapatan'],1,'Teh dan kopi saling menggantikan.']},
+{b:`<p><b>Kurva permintaan (D)</b> menggambarkan hubungan harga (P) dan jumlah diminta (Q): menurun dari kiri atas ke kanan bawah. Pada contoh <b>Qd = 100 − 2P</b>. Geser slider harga untuk melihat jumlah yang diminta.</p>
+<div id="w2"></div><input type="range" id="r2" min="0" max="50" value="30" oninput="w2()"><p id="t2"></p>
+<div class="box t"><b>Pergerakan sepanjang kurva:</b> terjadi karena perubahan harga barang itu sendiri. <b>Pergeseran kurva:</b> terjadi karena faktor lain (pendapatan, selera, dll.). Permintaan naik → D bergeser ke kanan; turun → ke kiri.</div>`,
+s:'Kurva D menurun. Harga berubah → bergerak sepanjang kurva; faktor lain berubah → kurva bergeser.',e:'Harga es teh Rp5.000 dibeli 60 gelas, harga Rp8.000 hanya 40 gelas.',q:['Pendapatan masyarakat naik sehingga permintaan beras bertambah. Hal ini ditandai dengan…',['Gerak ke atas sepanjang D','Kurva D bergeser ke kanan','Kurva D bergeser ke kiri','Gerak ke bawah sepanjang D'],1,'Faktor non-harga menggeser kurva.'],i:()=>w2()},
+{b:`<p><b>Penawaran</b> adalah jumlah barang atau jasa yang bersedia dijual produsen pada berbagai tingkat harga dalam waktu tertentu.</p>
+<div class="box"><b>Hukum penawaran:</b> “Jika harga suatu barang naik, jumlah barang yang ditawarkan naik; jika harga turun, jumlah yang ditawarkan turun, <i>ceteris paribus</i>.”</div><p>Contoh: pedagang jeruk menjual 50 kg saat harga Rp15.000/kg, tetapi menambah menjadi 80 kg saat harga Rp20.000/kg karena keuntungan lebih besar.</p>`,
+s:'Penawaran = kesediaan produsen menjual. Hukum penawaran: harga dan jumlah ditawarkan berhubungan searah.',e:'Petani lebih banyak menjual cabai saat harganya tinggi.',q:['Jika harga naik, jumlah barang yang ditawarkan produsen cenderung…',['Turun','Tetap','Naik','Nol'],2,'Harga tinggi berarti keuntungan lebih besar.']},
+{b:`<table><tr><th>Faktor</th><th>Contoh sederhana</th></tr>
+<tr><td>Harga barang</td><td>Harga telur naik → peternak menjual lebih banyak.</td></tr>
+<tr><td>Biaya produksi</td><td>Harga pupuk naik → petani mengurangi produksi (penawaran turun).</td></tr>
+<tr><td>Teknologi</td><td>Mesin panen modern → hasil lebih banyak (penawaran naik).</td></tr>
+<tr><td>Jumlah produsen</td><td>Banyak warung baru buka → penawaran makanan naik.</td></tr>
+<tr><td>Pajak dan subsidi</td><td>Pajak naik → penawaran turun. Subsidi pupuk → penawaran naik.</td></tr>
+<tr><td>Perkiraan harga mendatang</td><td>Harga beras diperkirakan naik → pedagang menahan stok sekarang.</td></tr></table>`,
+s:'Biaya produksi naik, pajak naik → penawaran turun. Teknologi, subsidi, produsen bertambah → penawaran naik.',e:'Subsidi pupuk membuat petani berproduksi lebih banyak.',q:['Teknologi produksi yang lebih canggih akan membuat penawaran…',['Turun','Naik','Tetap','Hilang'],1,'Teknologi menekan biaya dan menambah hasil.']},
+{b:`<p><b>Kurva penawaran (S)</b> menaik dari kiri bawah ke kanan atas. Pada contoh <b>Qs = 20 + 2P</b>. Geser slider harga untuk melihat jumlah yang ditawarkan.</p>
+<div id="w6"></div><input type="range" id="r6" min="0" max="50" value="30" oninput="w6()"><p id="t6"></p>
+<div class="box t"><b>Pergerakan:</b> harga barang itu sendiri berubah. <b>Pergeseran:</b> faktor lain berubah. Penawaran naik → S bergeser ke kanan; turun → ke kiri.</div>`,
+s:'Kurva S menaik. Harga berubah → gerak sepanjang kurva; biaya, teknologi, pajak berubah → kurva bergeser.',e:'Harga gula naik, pabrik memproduksi lebih banyak.',q:['Biaya produksi naik menyebabkan kurva S…',['Bergeser ke kiri','Bergeser ke kanan','Tetap','Berbalik arah'],0,'Produsen mampu menawarkan lebih sedikit pada harga yang sama.'],i:()=>w6()},
+{b:`<p><b>Harga keseimbangan (Pe)</b> adalah harga ketika jumlah yang diminta sama dengan jumlah yang ditawarkan (Qd = Qs). Jumlahnya disebut <b>jumlah keseimbangan (Qe)</b>, di titik potong <b>E</b>.</p>
+<div id="w7"></div><p>Atur harga pasar: <b id="v7"></b></p><input type="range" id="r7" min="0" max="50" value="30" oninput="w7()"><p id="t7"></p>
+<div class="box"><b>Proses:</b> harga di atas Pe → <i>kelebihan penawaran</i> (surplus) → harga turun. Harga di bawah Pe → <i>kelebihan permintaan</i> (kekurangan) → harga naik. Pasar bergerak menuju E.</div>
+<div class="box t"><b>Contoh perhitungan</b> Qd = 100 − 2P dan Qs = 20 + 2P<br>1. Syarat: Qd = Qs<br>2. 100 − 2P = 20 + 2P<br>3. 100 − 20 = 2P + 2P → 80 = 4P<br>4. <b>P = 20</b> (Pe)<br>5. Qd = 100 − 2(20) = 60; cek Qs = 20 + 2(20) = 60 ✓<br>6. <b>Qe = 60</b> → titik E (60; 20)</div>`,
+s:'Keseimbangan terjadi saat Qd = Qs. Pada contoh, Pe = 20 dan Qe = 60.',e:'Di akhir hari pasar, pedagang menurunkan harga sayur yang tersisa (kelebihan penawaran).',q:['Jika Qd = 80 − 2P dan Qs = 20 + 4P, harga keseimbangannya…',['5','10','15','20'],1,'80 − 2P = 20 + 4P → 60 = 6P → P = 10.'],i:()=>w7()},
+{b:`<p>Pilih kondisi pasar dan lihat perubahan keseimbangan. Garis putus-putus = kondisi awal (E₀: Pe = 20, Qe = 60).</p>
+<div id="sim"></div><div id="sbtn"><button class="btn" onclick="sim(120,20,'Permintaan naik (misal: permintaan cabai menjelang hari raya): D bergeser ke kanan.')">Permintaan naik</button><button class="btn" onclick="sim(70,20,'Permintaan turun (misal: daya beli menurun atau isu produk tidak aman): D bergeser ke kiri.')">Permintaan turun</button><button class="btn" onclick="sim(100,50,'Penawaran naik (misal: panen raya atau subsidi pupuk): S bergeser ke kanan.')">Penawaran naik</button><button class="btn" onclick="sim(100,0,'Penawaran turun (misal: biaya produksi naik): S bergeser ke kiri.')">Penawaran turun</button><button class="btn o" onclick="sim(100,20,'Kondisi awal.')">↺ Reset</button></div><p id="ts"></p>
+<table><tr><th>Peristiwa</th><th>Harga</th><th>Jumlah</th></tr><tr><td>Permintaan naik</td><td>naik</td><td>naik</td></tr><tr><td>Permintaan turun</td><td>turun</td><td>turun</td></tr><tr><td>Penawaran naik</td><td>turun</td><td>naik</td></tr><tr><td>Penawaran turun</td><td>naik</td><td>turun</td></tr></table>
+<div class="box t"><b>Studi kasus:</b> menjelang hari raya, permintaan cabai naik sehingga harga dan jumlah keseimbangan naik. Saat harga pupuk naik, biaya produksi petani naik, penawaran turun sehingga harga naik dan jumlah turun.</div>`,
+s:'Perubahan permintaan searah dengan harga dan jumlah. Perubahan penawaran berlawanan arah dengan harga, searah dengan jumlah.',e:'Panen raya bawang merah membuat harga bawang turun.',q:['Harga pupuk naik. Dampaknya pada pasar cabai…',['Harga turun, jumlah naik','Harga naik, jumlah turun','Harga dan jumlah naik','Harga dan jumlah turun'],1,'Penawaran turun → harga naik, jumlah turun.'],i:()=>sim(100,20,'Pilih kondisi pasar di atas.')}];
+const tb=(h,r)=>`<table><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${r.map(a=>`<tr>${a.map(x=>`<td>${x}</td>`).join('')}</tr>`).join('')}</table>`;
+const EX=[
+`<h4>Ciri-ciri permintaan</h4><ul><li>Disertai kemampuan membeli (daya beli).</li><li>Mengacu pada tingkat harga tertentu.</li><li>Berlaku pada jangka waktu tertentu, misalnya per hari atau per bulan.</li></ul>
+<h4>Jenis permintaan menurut daya beli</h4><ul><li><b>Permintaan efektif:</b> ada keinginan dan kemampuan, sehingga transaksi terjadi.</li><li><b>Permintaan potensial:</b> ada kemampuan membeli, tetapi belum membeli. Contoh: orang berpenghasilan tinggi yang belum membeli mobil.</li><li><b>Permintaan absolut:</b> ada keinginan, tetapi tidak mampu membeli.</li></ul>
+<h4>Permintaan individu dan permintaan pasar</h4><p>Permintaan individu adalah jumlah yang dibeli satu konsumen. Permintaan pasar adalah penjumlahan seluruh permintaan individu pada harga yang sama.</p>
+<h4>Skala permintaan</h4>${tb(['Harga (Rp/porsi)','Jumlah diminta (porsi)'],[['10.000','80'],['20.000','60'],['30.000','40'],['40.000','20']])}
+<h4>Mengapa hukum permintaan berlaku?</h4><ul><li><b>Efek substitusi:</b> saat harga naik, konsumen beralih ke barang pengganti yang lebih murah.</li><li><b>Efek pendapatan:</b> harga naik membuat daya beli riil menurun, sehingga jumlah barang yang dibeli berkurang.</li></ul>`,
+`<h4>Jenis barang menurut pendapatan</h4><ul><li><b>Barang normal:</b> pendapatan naik, permintaan naik (pakaian, makanan).</li><li><b>Barang inferior:</b> pendapatan naik, permintaan turun (mi instan, ketika orang beralih ke makanan lebih bergizi).</li><li><b>Barang mewah:</b> permintaan naik tajam ketika pendapatan tinggi (perhiasan).</li></ul>
+<h4>Barang substitusi dan komplementer</h4><ul><li><b>Substitusi</b> (saling menggantikan): beras dan jagung, teh dan kopi, ojek dan angkot.</li><li><b>Komplementer</b> (saling melengkapi): mobil dan bensin, sepatu dan kaus kaki, printer dan tinta.</li></ul>
+<div class="box">Ringkasnya: faktor yang menyebabkan permintaan <b>naik</b> menggeser kurva D ke <b>kanan</b>, sedangkan faktor yang menyebabkan permintaan <b>turun</b> menggeser kurva D ke <b>kiri</b>.</div>
+${tb(['Perubahan','Dampak pada permintaan'],[['Pendapatan naik (barang normal)','Naik'],['Selera meningkat','Naik'],['Harga barang substitusi naik','Naik'],['Harga barang komplementer naik','Turun'],['Jumlah konsumen bertambah','Naik'],['Harga diperkirakan naik','Naik (sekarang)']])}`,
+`<h4>Skala permintaan sebagai dasar kurva</h4>${tb(['Titik','P','Qd = 100 − 2P'],[['a','10','80'],['b','20','60'],['c','30','40'],['d','40','20']])}
+<h4>Langkah menggambar kurva</h4><ol><li>Buat sumbu vertikal P (harga) dan sumbu horizontal Q (jumlah).</li><li>Tentukan titik-titik dari skala permintaan.</li><li>Hubungkan titik-titik tersebut, hasilnya garis menurun.</li><li>Beri label D.</li></ol>
+<h4>Membaca kurva</h4><p>Kemiringan negatif menunjukkan hubungan harga dan jumlah berlawanan arah. Setiap kenaikan harga 10 menurunkan jumlah diminta sebesar 20 unit.</p>
+${tb(['','Gerak sepanjang kurva','Pergeseran kurva'],[['Penyebab','Harga barang itu sendiri','Faktor non-harga'],['Contoh','Harga turun, titik bergerak ke bawah-kanan','Pendapatan naik, D ke kanan']])}`,
+`<h4>Ciri-ciri penawaran</h4><ul><li>Ada kesediaan dan kemampuan produsen untuk menjual.</li><li>Mengacu pada tingkat harga tertentu.</li><li>Dalam jangka waktu tertentu.</li></ul>
+<h4>Penawaran individu dan penawaran pasar</h4><p>Penawaran individu adalah jumlah yang dijual satu produsen. Penawaran pasar adalah jumlah seluruh penawaran individu pada harga yang sama.</p>
+<h4>Skala penawaran</h4>${tb(['Harga (Rp/porsi)','Jumlah ditawarkan (porsi)'],[['10.000','40'],['20.000','60'],['30.000','80'],['40.000','100']])}
+<h4>Mengapa hukum penawaran berlaku?</h4><p>Harga yang lebih tinggi memberi peluang laba lebih besar sehingga produsen terdorong menambah produksi. Selain itu, produsen mampu menutup biaya tambahan produksi dari harga yang lebih tinggi.</p>
+<p>Contoh: pedagang gorengan menambah adonan dari 50 menjadi 80 potong ketika harga bahan baku dan harga jual sama-sama naik, karena laba per potong membaik.</p>`,
+`<h4>Penjelasan tambahan</h4><ul><li><b>Biaya produksi:</b> meliputi bahan baku, upah, sewa, dan listrik. Biaya naik membuat produsen mengurangi produksi.</li><li><b>Teknologi:</b> produksi lebih cepat dan murah sehingga penawaran bertambah.</li><li><b>Pajak:</b> menambah beban biaya, sehingga penawaran turun.</li><li><b>Subsidi:</b> bantuan pemerintah yang menurunkan biaya, sehingga penawaran naik.</li><li><b>Musim:</b> hasil pertanian bergantung pada musim; panen raya menaikkan penawaran, gagal panen menurunkannya.</li></ul>
+${tb(['Perubahan','Dampak pada penawaran'],[['Biaya produksi naik','Turun'],['Teknologi meningkat','Naik'],['Jumlah produsen bertambah','Naik'],['Pajak naik','Turun'],['Subsidi diberikan','Naik'],['Harga diperkirakan naik','Turun (stok ditahan)']])}
+<div class="box">Penawaran <b>naik</b> menggeser kurva S ke <b>kanan</b>, penawaran <b>turun</b> menggeser kurva S ke <b>kiri</b>.</div>`,
+`<h4>Skala penawaran sebagai dasar kurva</h4>${tb(['Titik','P','Qs = 20 + 2P'],[['a','10','40'],['b','20','60'],['c','30','80'],['d','40','100']])}
+<h4>Langkah menggambar kurva</h4><ol><li>Buat sumbu P dan Q.</li><li>Tentukan titik dari skala penawaran.</li><li>Hubungkan titik-titik, hasilnya garis menaik.</li><li>Beri label S.</li></ol>
+<h4>Membaca kurva</h4><p>Kemiringan positif menunjukkan harga dan jumlah ditawarkan searah. Setiap kenaikan harga 10 menaikkan jumlah ditawarkan sebesar 20 unit.</p>
+${tb(['','Gerak sepanjang kurva','Pergeseran kurva'],[['Penyebab','Harga barang itu sendiri','Biaya, teknologi, pajak, subsidi, dll.'],['Contoh','Harga naik, titik bergerak ke atas-kanan','Subsidi, S ke kanan']])}`,
+`<h4>Peran harga di pasar</h4><p>Harga bertindak sebagai sinyal: harga tinggi mendorong produsen menambah barang dan konsumen mengurangi pembelian, sedangkan harga rendah bekerja sebaliknya. Interaksi ini mengarahkan pasar ke keseimbangan.</p>
+<h4>Tabel keseimbangan (Qd = 100 − 2P, Qs = 20 + 2P)</h4>${tb(['P','Qd','Qs','Keadaan'],[['10','80','40','Kelebihan permintaan 40'],['15','70','50','Kelebihan permintaan 20'],['20','60','60','<b>Seimbang (E)</b>'],['25','50','70','Kelebihan penawaran 20'],['30','40','80','Kelebihan penawaran 40']])}
+<h4>Latihan perhitungan</h4><p>Jika Qd = 80 − 2P dan Qs = 20 + 4P: syarat Qd = Qs → 80 − 2P = 20 + 4P → 60 = 6P → <b>P = 10</b>. Qd = 80 − 2(10) = 60 → <b>Qe = 60</b>. Cek: Qs = 20 + 4(10) = 60 ✓.</p>
+<h4>Campur tangan pemerintah</h4><ul><li><b>Harga eceran tertinggi (HET)</b> melindungi konsumen, ditetapkan di bawah harga pasar; bila terlalu rendah dapat memunculkan kelangkaan.</li><li><b>Harga dasar</b> melindungi produsen, ditetapkan di atas harga pasar; bila terlalu tinggi dapat memunculkan kelebihan penawaran.</li></ul>`,
+`<h4>Langkah menganalisis peristiwa ekonomi</h4><ol><li>Tentukan barang dan pasar yang terdampak.</li><li>Tentukan apakah peristiwa memengaruhi permintaan, penawaran, atau keduanya.</li><li>Tentukan arah pergeseran kurva (kanan atau kiri).</li><li>Baca titik keseimbangan baru: harga dan jumlah.</li></ol>
+<h4>Contoh kasus lain</h4>${tb(['Peristiwa','Yang bergeser','Dampak'],[['Harga BBM naik, ongkos angkut mahal','S ke kiri','Harga naik, jumlah turun'],['Viral tren minuman baru','D ke kanan','Harga naik, jumlah naik'],['Subsidi bibit untuk petani','S ke kanan','Harga turun, jumlah naik'],['Musim hujan, jas hujan dicari','D ke kanan','Harga naik, jumlah naik'],['Pendapatan masyarakat turun','D ke kiri','Harga turun, jumlah turun']])}
+<h4>Latihan hitungan pergeseran</h4><p>Awal: Qd = 100 − 2P, Qs = 20 + 2P → Pe = 20, Qe = 60. Permintaan naik menjadi Qd = 120 − 2P: 120 − 2P = 20 + 2P → 100 = 4P → Pe = 25, Qe = 120 − 50 = 70. Harga dan jumlah keduanya naik.</p>
+<div class="box">Jika permintaan dan penawaran berubah bersamaan, arah salah satu variabel (harga atau jumlah) bergantung pada seberapa besar masing-masing pergeseran.</div>`];
+M.forEach((m,i)=>m.b+=EX[i]);
+function w2(){const p=+$('#r2').value;$('#w2').innerHTML=chart({S:0,p});$('#t2').innerHTML=`Harga P = <b>${p}</b> → Qd = 100 − 2(${p}) = <b>${100-2*p}</b> unit`}
+function w6(){const p=+$('#r6').value;$('#w6').innerHTML=chart({D:0,p});$('#t6').innerHTML=`Harga P = <b>${p}</b> → Qs = 20 + 2(${p}) = <b>${20+2*p}</b> unit`}
+function w7(){const p=+$('#r7').value,d=100-2*p,s=20+2*p;$('#v7').textContent='P = '+p;$('#w7').innerHTML=chart({p,eq:1});$('#t7').innerHTML=`Qd = ${d}, Qs = ${s} → `+(d==s?'<b>Pasar seimbang di titik E ✔</b>':d>s?`<b>Kelebihan permintaan ${d-s} unit</b>: harga cenderung naik`:`<b>Kelebihan penawaran ${s-d} unit</b>: harga cenderung turun`)}
+function sim(A,C,t){const pe=(A-C)/4,qe=A-2*pe;$('#sim').innerHTML=chart({A,C,oA:100,oC:20,eq:1});$('#ts').innerHTML=`${t}<br>Keseimbangan baru: <b>Pe = ${pe}</b>, <b>Qe = ${qe}</b> (awal: 20 dan 60)`}
+let cur=0;
+function openTab(i){cur=i;if(!S.seen.includes(i)){S.seen.push(i);save()}const m=M[i];
+$('#tabs').innerHTML=NM.map((n,k)=>`<button class="${k==i?'on':''}" onclick="openTab(${k})">${n}</button>`).join('');
+$('#mat').innerHTML=`<h3>${NM[i]}</h3>${m.b}<div class="box t"><b>📝 Ringkasan:</b> ${m.s}</div><div class="box"><b>🌏 Contoh sehari-hari:</b> ${m.e}</div><button class="btn o" ${i?'':'disabled'} onclick="openTab(${i-1})">← Materi Sebelumnya</button><button class="btn" onclick="${i<7?`openTab(${i+1})`:`location.hash='#evaluasi'`}">${i<7?'Materi Berikutnya →':'Ke Evaluasi →'}</button>`;
+if(m.i)m.i();prog()}
+function qa(k){const q=M[cur].q;document.querySelectorAll('#qq .opt').forEach((b,j)=>{b.classList.remove('ok','bad');if(j==q[2])b.classList.add('ok');else if(j==k)b.classList.add('bad')});$('#fb').innerHTML=k==q[2]?'✅ <b>Benar!</b> '+q[3]:'❌ <b>Belum tepat.</b> '+q[3]}
+
+// ===== Evaluasi =====
+const Q=[
+[0,'Keinginan membeli yang disertai kemampuan membeli disebut…',['Permintaan efektif','Kebutuhan','Permintaan potensial','Penawaran'],0,'Permintaan efektif = keinginan + daya beli.'],
+[0,'Bunyi hukum permintaan yang benar adalah…',['Harga naik, jumlah diminta naik','Harga naik, jumlah diminta turun','Harga turun, jumlah diminta turun','Harga tidak memengaruhi jumlah diminta'],1,'Harga dan jumlah diminta berlawanan arah (ceteris paribus).'],
+[0,'Hukum penawaran menyatakan bahwa jika harga naik maka…',['Jumlah ditawarkan turun','Jumlah ditawarkan tetap','Jumlah ditawarkan naik','Produsen berhenti menjual'],2,'Harga dan jumlah ditawarkan searah.'],
+[0,'Jumlah barang yang bersedia dijual produsen pada berbagai tingkat harga dalam waktu tertentu disebut…',['Permintaan','Produksi','Konsumsi','Penawaran'],3,'Itulah definisi penawaran.'],
+[1,'Gaji masyarakat naik sehingga permintaan barang normal…',['Bertambah','Berkurang','Tetap','Hilang'],0,'Pendapatan naik meningkatkan daya beli sehingga permintaan bertambah.'],
+[1,'Harga teh naik. Permintaan kopi (barang substitusi) akan…',['Turun','Tetap','Naik','Tidak menentu'],2,'Konsumen beralih ke barang pengganti.'],
+[1,'Penggunaan teknologi produksi yang lebih canggih menyebabkan penawaran…',['Berkurang','Bertambah','Tetap','Berhenti'],1,'Teknologi menaikkan hasil dan menekan biaya.'],
+[1,'Subsidi pemerintah kepada petani pupuk menyebabkan…',['Penawaran turun','Permintaan turun','Kurva D bergeser kiri','Penawaran naik'],3,'Subsidi menurunkan biaya produksi sehingga S bergeser ke kanan.'],
+[2,'Kurva permintaan berbentuk…',['Menaik dari kiri bawah ke kanan atas','Menurun dari kiri atas ke kanan bawah','Garis mendatar','Garis tegak lurus'],1,'Kurva D memiliki kemiringan negatif.'],
+[2,'Perubahan harga barang itu sendiri pada kurva permintaan menyebabkan…',['Pergeseran D ke kanan','Pergeseran D ke kiri','Pergerakan sepanjang kurva D','Perubahan selera'],2,'Faktor harga sendiri menyebabkan pergerakan, bukan pergeseran.'],
+[2,'Jika Qd = 100 − 2P, jumlah yang diminta pada P = 10 adalah…',['60','70','80','90'],2,'Qd = 100 − 20 = 80.'],
+[2,'Jika Qs = 20 + 2P, jumlah yang ditawarkan pada P = 15 adalah…',['40','50','60','35'],1,'Qs = 20 + 30 = 50.'],
+[3,'Dengan Qd = 100 − 2P dan Qs = 20 + 2P, harga keseimbangan adalah…',['15','20','25','30'],1,'100 − 2P = 20 + 2P → 80 = 4P → P = 20.'],
+[3,'Dengan fungsi yang sama, jumlah keseimbangannya adalah…',['40','50','60','80'],2,'Qe = 100 − 2(20) = 60.'],
+[3,'Pada harga P = 30 (fungsi yang sama), pasar mengalami…',['Kelebihan permintaan 40 unit','Kelebihan permintaan 20 unit','Kelebihan penawaran 20 unit','Kelebihan penawaran 40 unit'],3,'Qd = 40, Qs = 80 → kelebihan penawaran 40 unit.'],
+[3,'Pada harga P = 10 (fungsi yang sama), pasar mengalami…',['Kelebihan permintaan 40 unit','Kelebihan penawaran 40 unit','Keseimbangan','Kelebihan permintaan 20 unit'],0,'Qd = 80, Qs = 40 → kelebihan permintaan 40 unit.'],
+[4,'Menjelang hari raya permintaan cabai naik, penawaran tetap. Dampaknya…',['Harga turun, jumlah naik','Harga dan jumlah keseimbangan naik','Harga naik, jumlah turun','Harga dan jumlah turun'],1,'D bergeser kanan → Pe dan Qe naik.'],
+[4,'Harga pupuk naik sehingga biaya petani cabai meningkat. Dampaknya pada pasar cabai…',['Harga turun, jumlah naik','Harga dan jumlah naik','Harga naik, jumlah turun','Harga dan jumlah turun'],2,'S bergeser kiri → Pe naik, Qe turun.'],
+[4,'Panen raya bawang merah membuat pasokan melimpah. Dampaknya…',['Harga turun, jumlah naik','Harga naik, jumlah naik','Harga naik, jumlah turun','Harga turun, jumlah turun'],0,'S bergeser kanan → Pe turun, Qe naik.'],
+[4,'Muncul isu bahwa sebuah produk berbahaya sehingga konsumen menjauhinya. Dampaknya…',['Harga naik, jumlah naik','Harga naik, jumlah turun','Harga turun, jumlah naik','Harga turun, jumlah turun'],3,'D bergeser kiri → Pe dan Qe turun.']];
+const REC={0:[0,3],1:[1,4],2:[2,5],3:[6],4:[7]},CAT=['Pengertian dan hukum','Faktor-faktor','Kurva','Keseimbangan','Analisis kasus'];
+let ev=[],tm=null,left=1800;
+function startEv(){ev=Array(20).fill(-1);left=1800;$('#evIntro').hidden=true;$('#evRes').hidden=true;$('#evBox').hidden=false;
+$('#qs').innerHTML=Q.map((q,i)=>`<div class="card"><b>${i+1}. ${q[1]}</b>${q[2].map((o,k)=>`<button class="opt" data-q="${i}" data-k="${k}">${String.fromCharCode(65+k)}. ${o}</button>`).join('')}</div>`).join('');
+document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{const i=+b.dataset.q;ev[i]=+b.dataset.k;document.querySelectorAll(`[data-q="${i}"]`).forEach(x=>x.classList.toggle('on',x==b));$('#ans').textContent='Terjawab: '+ev.filter(x=>x>=0).length+'/20'});
+$('#ans').textContent='Terjawab: 0/20';clearInterval(tm);tick();tm=setInterval(tick,1000);location.hash='#evaluasi'}
+function tick(){const m=String(Math.floor(left/60)).padStart(2,'0'),s=String(left%60).padStart(2,'0');$('#timer').textContent=`⏱ ${m}:${s}`;if(left<=0){submitEv(true);return}left--}
+function submitEv(auto){clearInterval(tm);const ok=Q.filter((q,i)=>ev[i]==q[3]).length,sc=ok*5;S.last=sc;S.count++;save();prog();
+const cat=sc>=90?'Sangat Baik':sc>=80?'Baik':sc>=70?'Cukup':'Perlu Belajar Kembali';
+const bad=new Set(),wrong=[0,0,0,0,0];Q.forEach((q,i)=>{if(ev[i]!=q[3]){wrong[q[0]]++;REC[q[0]].forEach(x=>bad.add(x))}});
+$('#evBox').hidden=true;const r=$('#evRes');r.hidden=false;
+r.innerHTML=`${auto?'<div class="box">⏰ Waktu habis, jawaban dikumpulkan otomatis.</div>':''}<div class="card"><div class="stat"><div><b>${sc}</b>Nilai akhir</div><div><b>${ok}</b>Benar</div><div><b>${20-ok}</b>Salah</div><div><b>${ok*5}%</b>Persentase</div></div><h3>Kategori: ${cat}</h3>
+<p><b>Rekomendasi:</b> ${bad.size?'pelajari kembali '+[...bad].sort().map(x=>`<a href="#materi" onclick="openTab(${x})">${NM[x]}</a>`).join(', ')+'.':'pertahankan! Semua jawabanmu benar.'}</p><button class="btn y" onclick="startEv()">Ulangi Evaluasi</button><a class="btn o" href="#materi">Kembali ke Materi</a></div><h3>Pembahasan</h3>`+
+Q.map((q,i)=>`<div class="card"><b>${i+1}. ${q[1]}</b><p>${ev[i]<0?'⚪ Tidak dijawab':ev[i]==q[3]?'✅ Jawabanmu benar':'❌ Jawabanmu: '+String.fromCharCode(65+ev[i])+'. '+q[2][ev[i]]}<br>Kunci: <b>${String.fromCharCode(65+q[3])}. ${q[2][q[3]]}</b><br><small>${q[4]}</small></p></div>`).join('');
+r.scrollIntoView()}
+function resetAll(){if(confirm('Hapus semua progres?')){S={seen:[],chk:[],last:null,count:0};save();document.querySelectorAll('[data-g]').forEach(c=>c.checked=false);prog();openTab(0)}}
+openTab(0);
+</script></body></html>
